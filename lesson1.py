@@ -100,6 +100,8 @@ def fourth_paragraph3():
         greatest_num = max(curr_num, greatest_num)
         # увеличиваем ранг
         rank *= 10
+        
+    print(f'Наибольшая цифра в веденом числе {greatest_num}')
 
 def fifth_paragraph():
     """Сложная экономическая задача"""
