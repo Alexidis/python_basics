@@ -24,7 +24,7 @@ def second_paragraph():
     """Первод секунд в часы, минуты секунды с использованием арифметических операций."""
     custom_seconds = int(input('Введите время в секундах '))
 
-    # цлочисленное деление на 3600 дает часы
+    # целочисленное деление на 3600 дает часы
     hours = custom_seconds // 3600
     # целочисленное деление на 60 остатка от деления на 3600 дает минуты
     minutes = (custom_seconds % 3600) // 60
@@ -55,6 +55,32 @@ def fourth_paragraph():
         curr_num = int(custom_int[i])
         greatest_num = max(curr_num, greatest_num)
         i += 1
+    print(f'Наибольшая цифра в веденом числе {greatest_num}')
+
+    
+def fourth_paragraph2():
+    """Поиск наибольшей цифры в числе."""
+    custom_int = int(input('Введите целое положительное число '))
+
+    # разряд цифры в числе
+    rank = 1
+    greatest_num = 0
+
+    # определяем максимальный разряд
+    while custom_int // rank > 10:
+        rank *= 10
+
+    # проверяем все разряды
+    while rank >= 1:
+        # находим цифру соотвествующую разряду
+        curr_num = custom_int // rank
+        # определяем текущий максимум
+        greatest_num = max(curr_num, greatest_num)
+        # убираем последний разряд из числа
+        custom_int -= curr_num * rank
+        # переходим на младший разряд
+        rank //= 10
+
     print(f'Наибольшая цифра в веденом числе {greatest_num}')
 
 
@@ -103,6 +129,7 @@ if __name__ == '__main__':
     second_paragraph()
     third_paragraph()
     fourth_paragraph()
+    fourth_paragraph2()
     fifth_paragraph()
     print(sixth_paragraph())
 
