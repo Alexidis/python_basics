@@ -98,29 +98,22 @@ def sixth_paragraph():
     # инициализируем список товаров
     products = []
     # создаем шаблон словаря характеристик и сводной
-    tmpl = dict.fromkeys(['название', 'цена', 'количество', 'ед'])
+    characteristics = ['название', 'цена', 'количество', 'еденицы измерения']
     # заполняем список продуктов и их характеристик
     for i in range(products_qnt):
-        product_specification = tmpl.copy()
-        product_specification['название'] = input('Введите навазние товара ')
-        product_specification['цена'] = input('Введите цену товара ')
-        product_specification['количество'] = input('Введите количество товара ')
-        product_specification['ед'] = input('Введите еденицы измерения товара ')
+        product_specification = dict.fromkeys(characteristics)
+        for characteristic in characteristics:
+            product_specification[characteristic] = input(f'Введите {characteristic} товара ')
         products.append((i + 1, product_specification))
 
     # инициализируем сводную
-    pivot = tmpl.copy()
-    pivot['название'] = []
-    pivot['цена'] = []
-    pivot['количество'] = []
-    pivot['ед'] = []
-
+    pivot = dict.fromkeys(characteristics, [])
     # заполняем сводную
-    for product in products:
-        pivot['название'].append(product[-1]['название'])
-        pivot['цена'].append(product[-1]['цена'])
-        pivot['количество'].append(product[-1]['количество'])
-        pivot['ед'].append(product[-1]['ед'])
+    for characteristic in characteristics:
+        sub_car = []
+        for product in products:
+            sub_car.append(product[-1][characteristic])
+        pivot[characteristic] = sub_car
 
     print(pivot)
 
