@@ -57,7 +57,7 @@ def fourth_paragraph():
         i += 1
     print(f'Наибольшая цифра в веденом числе {greatest_num}')
 
-    
+
 def fourth_paragraph2():
     """Поиск наибольшей цифры в числе."""
     custom_int = int(input('Введите целое положительное число '))
@@ -100,9 +100,10 @@ def fourth_paragraph3():
         greatest_num = max(curr_num, greatest_num)
         # увеличиваем ранг
         rank *= 10
-        
+
     print(f'Наибольшая цифра в веденом числе {greatest_num}')
-    
+
+
 def fourth_paragraph4():
     """Поиск наибольшей цифры в числе."""
     custom_int = int(input('Введите целое положительное число '))
@@ -121,6 +122,7 @@ def fourth_paragraph4():
         greatest_num = max(curr_num, greatest_num)
 
     print(f'Наибольшая цифра в веденом числе {greatest_num}')
+
 
 def fifth_paragraph():
     """Сложная экономическая задача"""
@@ -172,6 +174,3 @@ if __name__ == '__main__':
     fourth_paragraph4()
     fifth_paragraph()
     print(sixth_paragraph())
-
-
-
