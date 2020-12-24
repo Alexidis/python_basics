@@ -3,7 +3,6 @@ def sum_quit(numbers):
 
     # инициируем начальные значения суммы и выхода
     s = 0
-    q = False
     # суммируем все числа
     for number in numbers:
         # если они числа
@@ -11,9 +10,8 @@ def sum_quit(numbers):
             s += float(number)
         # иначе выходим, и передаем сигнад о выходе во вне
         else:
-            q = True
             break
-    return s, q
+    return s
 
 
 print('Введите через пробел три числа ')
@@ -21,12 +19,10 @@ total_sum = 0
 while True:
     # получаем список чисел
     current_numbers = input().split()
-    # получаем сумму текущего набора и сигнал о выходе
-    current_sum, esc = sum_quit(current_numbers)
-    # расчитываем общую сумму
-    total_sum += current_sum
+    # сумму текущего набора прибавляем к общей сумме
+    total_sum += sum_quit(current_numbers)
     print(f'Сумма всех чисел равна {total_sum}')
-
+    esc = list(filter(lambda x: not x.isdigit(), current_numbers))
     # выходим при получении надлежащего сигнала
     if esc:
         break
