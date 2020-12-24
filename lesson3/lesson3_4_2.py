@@ -2,7 +2,7 @@ def my_func(x, y):
     """Возведение в степень"""
 
     # получаем знак степень
-    positive = y > 0
+    factor = x if y > 0 else 1/x
     # получаем модуль степени
     exp = abs(y)
     # инициируем начальное значение
@@ -10,7 +10,7 @@ def my_func(x, y):
     # если стпень 0 то в цикл не пойдем
     for i in range(exp):
         # для положительных степеней умножаем, для отрицательной степени делим
-        comp *= x if positive else 1 / x
+        comp *= factor
     return comp
 
 
