@@ -26,3 +26,13 @@ def cycle_iter_creator(some_list, repeats=5):
             yield i
         else:
             break
+
+
+def main():
+    l6_low_bound = int(input('Введите начальное значение итератора '))
+    count_itr = count_iter_creator(l6_low_bound)
+    print(f'Из итератора получился список {list(count_itr)}')
+
+    l6_list = input('Введите список для повторения ').split()
+    cycle_itr = cycle_iter_creator(l6_list)
+    print(f'Из итератора получился список {list(cycle_itr)}')
