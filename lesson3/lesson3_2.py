@@ -6,11 +6,12 @@ def user_form_printer(**inner_fields):
         print(f'{spaced_title}: {value}, ', end='')
 
 
-# можно было и списком но так показалось эстетичней
-fields = dict.fromkeys(['Имя', 'Фамилия', 'Год рождения', 'Город проживания', 'Email', 'Телефон'], '')
+def main():
+    # можно было и списком но так показалось эстетичней
+    fields = dict.fromkeys(['Имя', 'Фамилия', 'Год рождения', 'Город проживания', 'Email', 'Телефон'], '')
 
-for field in fields.keys():
-    fields[field] = input(f'Заполните графу \'{field}\' ')
+    for field in fields.keys():
+        fields[field] = input(f'Заполните графу \'{field}\' ')
 
-user_form_printer(Имя=fields['Имя'], Фамилия=fields['Фамилия'], Год_рождения=fields['Год рождения'],
-                  Город_проживания=fields['Город проживания'], Email=fields['Email'], Телефон=fields['Телефон'])
+    user_form_printer(Имя=fields['Имя'], Фамилия=fields['Фамилия'], Год_рождения=fields['Год рождения'],
+                      Город_проживания=fields['Город проживания'], Email=fields['Email'], Телефон=fields['Телефон'])

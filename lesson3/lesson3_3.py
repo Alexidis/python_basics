@@ -1,4 +1,4 @@
-def my_func(first, second, third):
+def greatest_sum(first, second, third):
     """Сумма двух максимумов"""
 
     # Соединяем все в tuple
@@ -10,5 +10,6 @@ def my_func(first, second, third):
     return result
 
 
-a, b, c = input('Введите через пробел три числа ').split()
-print(my_func(int(a), int(b), int(c)))
+def main():
+    a, b, c = input('Введите через пробел три числа ').split()
+    print(greatest_sum(int(a), int(b), int(c)))
