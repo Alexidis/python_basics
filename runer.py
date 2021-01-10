@@ -2,6 +2,7 @@ import lesson1 as l1
 import lesson2 as l2
 import lesson3 as l3
 import lesson4 as l4
+import lesson5 as l5
 
 if __name__ == '__main__':
     # первая практика
@@ -41,3 +42,13 @@ if __name__ == '__main__':
     l4.p5_list_production()
     l4.p6_iter_creator()
     l4.p7_inner_fact()
+
+    # пятая практика
+    l5.p1_programmatic_file()
+    l5.p2_file_counter()
+    l5.p3_oneC_like()
+    l5.p4_numbers_translator()
+    l5.p5_file_num_sum()
+    l5.p6_school_scheduler()
+    l5.p7_profit_calculator()
+
