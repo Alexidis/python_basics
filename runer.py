@@ -64,8 +64,8 @@ if __name__ == '__main__':
     print(f'Приняли сотрудника {new_worker.get_full_name()}, на должность {new_worker.position}'
           f' с ЗП {new_worker.get_total_income()}')
 
-    town_car = l6.p4_TownCar('Toyota', 'Белый', 30, 8, 5)
-    work_car = l6.p4_WorkCar('KIA', 'Черный', 33, 10, 3)
+    town_car = l6.p4_TownCar('Toyota', 'Белый', 30, 8, 5, 60)
+    work_car = l6.p4_WorkCar('KIA', 'Черный', 20, 10, 3, 40)
     sport_car = l6.p4_SportCar('Ferrari', 'Желтый', 35, 7, 1)
     racers = [town_car, work_car, sport_car]
     mega_race = l6.p4_Race(racers, 300)
