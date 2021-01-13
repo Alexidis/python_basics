@@ -3,6 +3,7 @@ import lesson2 as l2
 import lesson3 as l3
 import lesson4 as l4
 import lesson5 as l5
+import lesson6 as l6
 
 if __name__ == '__main__':
     # первая практика
@@ -51,4 +52,9 @@ if __name__ == '__main__':
     l5.p5_file_num_sum()
     l5.p6_school_scheduler()
     l5.p7_profit_calculator()
+
+    # шестая практика
+    traffic_light = l6.p1_TrafficLight()
+    traffic_light.auto_switch()
+
 
