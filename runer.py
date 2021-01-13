@@ -64,6 +64,13 @@ if __name__ == '__main__':
     print(f'Приняли сотрудника {new_worker.get_full_name()}, на должность {new_worker.position}'
           f' с ЗП {new_worker.get_total_income()}')
 
+    pen = l6.p5_Pen('Ручка')
+    pencil = l6.p5_Pencil('Карандаш')
+    handle = l6.p5_Handle('Маркер')
+    pen.draw()
+    pencil.draw()
+    handle.draw()
+
 
 
 
