@@ -57,4 +57,8 @@ if __name__ == '__main__':
     traffic_light = l6.p1_TrafficLight()
     traffic_light.auto_switch()
 
+    route666 = l6.p2_Road(6600, 60)
+    print(f'Масса асфальта для покрытия дороги666 равна {route666.calc_asphalt_mass(6)}')
+
+
 
