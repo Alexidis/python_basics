@@ -60,5 +60,10 @@ if __name__ == '__main__':
     route666 = l6.p2_Road(6600, 60)
     print(f'Масса асфальта для покрытия дороги666 равна {route666.calc_asphalt_mass(6)}')
 
+    new_worker = l6.p3_Position('Филиппов', 'Артем', 'Специалист', 15100, 35700)
+    print(f'Приняли сотрудника {new_worker.get_full_name()}, на должность {new_worker.position}'
+          f' с ЗП {new_worker.get_total_income()}')
+
+
 
 
