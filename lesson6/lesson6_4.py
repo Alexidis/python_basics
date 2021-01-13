@@ -5,8 +5,9 @@ class Car:
     """
     Класс "Автомобиль"
     """
-    def __init__(self, name, color, acceleration, braking, turning):
+    def __init__(self, name, color, acceleration, braking, turning, speed_limit=0):
         self.speed = 0
+        self.speed_limit = speed_limit
         self._acceleration_speed = acceleration
         self._braking_speed = braking
         self._turning_speed = turning
@@ -68,19 +69,12 @@ class TownCar(Car):
         Показываем скорость или фиксируем правонарушение
         :return: статус скоростного режима
         """
-        self._crime = self.speed > 60
+        self._crime = self.speed_limit and self.speed > self.speed_limit
         return 'Вы превысили скорость' if self._crime else Car.show_speed(self)
 
 
-class WorkCar(Car):
+class WorkCar(TownCar):
     """Класс рабочий автомобиль"""
-    def show_speed(self):
-        """
-        Показываем скорость или фиксируем правонарушение
-        :return: статус скоростного режима
-        """
-        self._crime = self.speed > 60
-        return 'Вы превысили скорость' if self._crime else Car.show_speed(self)
 
 
 class PoliceCar(Car):
