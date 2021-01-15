@@ -85,3 +85,12 @@ if __name__ == '__main__':
     matrix_c = matrix_a + matrix_b
     print(matrix_c)
 
+    men_coat = l7.p2_Coat('Мужское пальто', 12)
+    print(f'На пальто для мужчины ростом {men_coat.height} необходимо {men_coat.fabric_consumption()} метров ткани')
+    men_coat.height += 5
+    print(f'А на пальто для мужчины ростом {men_coat.height} необходимо {men_coat.fabric_consumption()} метров ткани')
+
+    kid_suit = l7.p2_Suit('Детский костюм', 30)
+    print(f'На костюм размером {kid_suit.size} для ребенка необходимо {kid_suit.fabric_consumption()} метров ткани')
+    kid_suit.size += 5
+    print(f'А на костюм размером {kid_suit.size} для ребенка необходимо {kid_suit.fabric_consumption()} метров ткани')
