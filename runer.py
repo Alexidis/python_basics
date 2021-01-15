@@ -4,6 +4,7 @@ import lesson3 as l3
 import lesson4 as l4
 import lesson5 as l5
 import lesson6 as l6
+import lesson7 as l7
 
 if __name__ == '__main__':
     # первая практика
@@ -77,3 +78,10 @@ if __name__ == '__main__':
     pen.draw()
     pencil.draw()
     handle.draw()
+
+    # седьмая практика
+    matrix_a = l7.p1_Matrix([[2, 3, 4], [5, 6, 7], [8, 9, 10]])
+    matrix_b = l7.p1_Matrix([[1, 1, 1], [2, 2, 2], [3, 3, 3]])
+    matrix_c = matrix_a + matrix_b
+    print(matrix_c)
+
