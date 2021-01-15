@@ -94,3 +94,17 @@ if __name__ == '__main__':
     print(f'На костюм размером {kid_suit.size} для ребенка необходимо {kid_suit.fabric_consumption()} метров ткани')
     kid_suit.size += 5
     print(f'А на костюм размером {kid_suit.size} для ребенка необходимо {kid_suit.fabric_consumption()} метров ткани')
+
+    cell = l7.p3_Cell(7)
+    cell2 = l7.p3_Cell(5)
+    cell3 = cell + cell2
+    print(cell3.make_order(5))
+
+    cell3 = cell - cell2
+    print(cell3.make_order(1))
+
+    cell3 = cell * cell2
+    print(cell3.make_order(7))
+
+    cell3 = cell / cell2
+    print(cell3.make_order(1))
