@@ -3,6 +3,7 @@ import lesson2 as l2
 import lesson3 as l3
 import lesson4 as l4
 import lesson5 as l5
+import lesson6 as l6
 
 if __name__ == '__main__':
     # первая практика
@@ -52,3 +53,27 @@ if __name__ == '__main__':
     l5.p6_school_scheduler()
     l5.p7_profit_calculator()
 
+    # шестая практика
+    traffic_light = l6.p1_TrafficLight()
+    traffic_light.auto_switch()
+
+    route666 = l6.p2_Road(6600, 60)
+    print(f'Масса асфальта для покрытия дороги666 равна {route666.calc_asphalt_mass(6)}')
+
+    new_worker = l6.p3_Position('Филиппов', 'Артем', 'Специалист', 15100, 35700)
+    print(f'Приняли сотрудника {new_worker.get_full_name()}, на должность {new_worker.position}'
+          f' с ЗП {new_worker.get_total_income()}')
+
+    town_car = l6.p4_TownCar('Toyota', 'Белый', 30, 8, 5, 60)
+    work_car = l6.p4_WorkCar('KIA', 'Черный', 20, 10, 3, 40)
+    sport_car = l6.p4_SportCar('Ferrari', 'Желтый', 35, 7, 1)
+    racers = [town_car, work_car, sport_car]
+    mega_race = l6.p4_Race(racers, 300)
+    mega_race.start_race()
+
+    pen = l6.p5_Pen('Ручка')
+    pencil = l6.p5_Pencil('Карандаш')
+    handle = l6.p5_Handle('Маркер')
+    pen.draw()
+    pencil.draw()
+    handle.draw()
