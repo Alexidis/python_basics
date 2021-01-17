@@ -1,14 +1,5 @@
 class Matrix:
     """Коасс Матрица """
-    def __init__(self):
-        """
-        Конструктор по умолчанию
-        """
-        self.rows = [[]]
-        self.row_num = 0
-        self.col_num = 0
-        self.symmetrical = True
-
     def __init__(self, data):
         """
         Конструктор на основе данных
