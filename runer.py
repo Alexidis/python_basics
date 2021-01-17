@@ -4,6 +4,7 @@ import lesson3 as l3
 import lesson4 as l4
 import lesson5 as l5
 import lesson6 as l6
+import lesson7 as l7
 
 if __name__ == '__main__':
     # первая практика
@@ -77,3 +78,33 @@ if __name__ == '__main__':
     pen.draw()
     pencil.draw()
     handle.draw()
+
+    # седьмая практика
+    matrix_a = l7.p1_Matrix([[2, 3, 4], [5, 6, 7], [8, 9, 10]])
+    matrix_b = l7.p1_Matrix([[1, 1, 1], [2, 2, 2], [3, 3, 3]])
+    matrix_c = matrix_a + matrix_b
+    print(matrix_c)
+
+    men_coat = l7.p2_Coat('Мужское пальто', 12)
+    print(f'На пальто для мужчины ростом {men_coat.height} необходимо {men_coat.fabric_consumption()} метров ткани')
+    men_coat.height += 5
+    print(f'А на пальто для мужчины ростом {men_coat.height} необходимо {men_coat.fabric_consumption()} метров ткани')
+
+    kid_suit = l7.p2_Suit('Детский костюм', 30)
+    print(f'На костюм размером {kid_suit.size} для ребенка необходимо {kid_suit.fabric_consumption()} метров ткани')
+    kid_suit.size += 5
+    print(f'А на костюм размером {kid_suit.size} для ребенка необходимо {kid_suit.fabric_consumption()} метров ткани')
+
+    cell = l7.p3_Cell(7)
+    cell2 = l7.p3_Cell(5)
+    cell3 = cell + cell2
+    print(cell3.make_order(5))
+
+    cell3 = cell - cell2
+    print(cell3.make_order(1))
+
+    cell3 = cell * cell2
+    print(cell3.make_order(7))
+
+    cell3 = cell / cell2
+    print(cell3.make_order(1))
