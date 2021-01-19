@@ -111,19 +111,6 @@ if __name__ == '__main__':
     print(cell3.make_order(1))
 
     # восьмая практика
-    date_str = input('Введите дату в формате ДД.ММ.ГГГ ')
-    if l8.p1_Date.validate(date_str):
-        date = l8.p1_Date(date_str)
-        numerologic = date.to_int("Day") + date.to_int("Month") + date.to_int("Year")
-        print(f'Сумма чисел в веденой вами дте равна {numerologic}')
-    else:
-        print(f'Вы ввели не корректную дату')
-
-    (dividend, divisor) = input('Введите делимое и делитель через проьел ').split(' ')
-    try:
-        if not float(divisor):
-            raise l8.p2_ZeroDivisionException
-        quotient = float(dividend) / float(divisor)
-        print('Вы не смогли сломать програму')
-    except l8.p2_ZeroDivisionException:
-        print('На ноль делить нельзя')
+    l8.p1_My_Date()
+    l8.p2_ZeroDivisionException()
+    l8.p3_NonNumericListError()

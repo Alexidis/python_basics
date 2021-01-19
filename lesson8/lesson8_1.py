@@ -57,3 +57,13 @@ class Date:
         except (TypeError, ValueError):
             pass
         return False
+
+
+def main():
+    date_str = input('Введите дату в формате ДД.ММ.ГГГ ')
+    if Date.validate(date_str):
+        date = Date(date_str)
+        numerologic = date.to_int("Day") + date.to_int("Month") + date.to_int("Year")
+        print(f'Сумма чисел в веденой вами дте равна {numerologic}')
+    else:
+        print(f'Вы ввели не корректную дату')
