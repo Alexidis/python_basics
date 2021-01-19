@@ -5,6 +5,7 @@ import lesson4 as l4
 import lesson5 as l5
 import lesson6 as l6
 import lesson7 as l7
+import lesson8 as l8
 
 if __name__ == '__main__':
     # первая практика
@@ -108,3 +109,12 @@ if __name__ == '__main__':
 
     cell3 = cell / cell2
     print(cell3.make_order(1))
+
+    # восьмая практика
+    date_str = input('Введите дату в формате ДД.ММ.ГГГ ')
+    if l8.p1_Date.validate(date_str):
+        date = l8.p1_Date(date_str)
+        numerologic = date.to_int("Day") + date.to_int("Month") + date.to_int("Year")
+        print(f'Сумма чисел в веденой вами дте равна {numerologic}')
+    else:
+        print(f'Вы ввели не корректную дату')
