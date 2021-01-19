@@ -118,3 +118,12 @@ if __name__ == '__main__':
         print(f'Сумма чисел в веденой вами дте равна {numerologic}')
     else:
         print(f'Вы ввели не корректную дату')
+
+    (dividend, divisor) = input('Введите делимое и делитель через проьел ').split(' ')
+    try:
+        if not float(divisor):
+            raise l8.p2_ZeroDivisionException
+        quotient = float(dividend) / float(divisor)
+        print('Вы не смогли сломать програму')
+    except l8.p2_ZeroDivisionException:
+        print('На ноль делить нельзя')
