@@ -114,3 +114,11 @@ if __name__ == '__main__':
     l8.p1_My_Date()
     l8.p2_ZeroDivisionException()
     l8.p3_NonNumericListError()
+
+    (real, img) = input('Задайте реальную и вещественнуб часть первого числа через пробел ').split(' ')
+    a = l8.p7_Complex(real, img)
+    (real, img) = input('Задайте реальную и вещественнуб часть второго числа через пробел ').split(' ')
+    b = l8.p7_Complex(real, img)
+    c = a + b
+    d = a * b
+    print(f'Сложение комплексных чисел {a} и {b} равно {c}, а их умножение равно {d}')
