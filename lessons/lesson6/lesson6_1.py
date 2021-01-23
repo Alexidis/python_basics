@@ -74,3 +74,8 @@ class TrafficLight:
         print(TrafficLight.__colors)
         for color in TrafficLight.__colors:
             self.running(color)
+
+
+def main():
+    traffic_light = TrafficLight()
+    traffic_light.auto_switch()

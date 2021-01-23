@@ -20,3 +20,8 @@ class Road:
         :return: массу асфальта, необходимого для покрытия всего дорожного полотна
         """
         return self._length * self._wight *  self._height * asphalt_mass
+
+
+def main():
+    route666 = Road(6600, 60)
+    print(f'Масса асфальта для покрытия дороги666 равна {route666.calc_asphalt_mass(6)}')

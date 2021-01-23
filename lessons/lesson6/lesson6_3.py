@@ -34,3 +34,9 @@ class Position(Worker):
         :return: полная ЗП сотрудника
         """
         return self._income['wage'] + self._income['bonus']
+
+
+def main():
+    new_worker = Position('Филиппов', 'Артем', 'Специалист', 15100, 35700)
+    print(f'Приняли сотрудника {new_worker.get_full_name()}, на должность {new_worker.position}'
+          f' с ЗП {new_worker.get_total_income()}')

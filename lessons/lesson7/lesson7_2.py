@@ -49,3 +49,15 @@ class Coat(Clothes):
     def fabric_consumption(self):
         # создаем реализацию абстрактного метода
         return self.height * 6.5 + 0.5
+
+
+def main():
+    men_coat = Coat('Мужское пальто', 12)
+    print(f'На пальто для мужчины ростом {men_coat.height} необходимо {men_coat.fabric_consumption()} метров ткани')
+    men_coat.height += 5
+    print(f'А на пальто для мужчины ростом {men_coat.height} необходимо {men_coat.fabric_consumption()} метров ткани')
+
+    kid_suit = Suit('Детский костюм', 30)
+    print(f'На костюм размером {kid_suit.size} для ребенка необходимо {kid_suit.fabric_consumption()} метров ткани')
+    kid_suit.size += 5
+    print(f'А на костюм размером {kid_suit.size} для ребенка необходимо {kid_suit.fabric_consumption()} метров ткани')

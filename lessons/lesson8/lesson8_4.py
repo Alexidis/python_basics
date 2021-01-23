@@ -130,3 +130,15 @@ class Store:
                 for sku in units['list']:
                     print(f'{indent}{sku.characteristic()}')
             indent = ''
+
+
+def main():
+    new_store = Store()
+    scanner1 = Scanner('brand', 'model', 123.00, 11)
+    scanner2 = Scanner('brand2', 'model2', 456.00, 10)
+    printer = Printer('brand3', 'model3', 123.00, 20)
+    new_store.accept(scanner1, 1)
+    new_store.accept(scanner2, 2)
+    new_store.accept(printer, 3)
+    new_store.transfer(scanner2, 1)
+    new_store.show_remains()

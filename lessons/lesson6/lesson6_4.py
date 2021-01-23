@@ -154,3 +154,12 @@ class Race:
             print(f'Копы на ВАЗике цвета {self.__police.color} всех догнали')
         else:
             print(f'Побеждает {winner.color} {winner.name}')
+
+
+def main():
+    town_car = TownCar('Toyota', 'Белый', 30, 8, 5, 60)
+    work_car = WorkCar('KIA', 'Черный', 20, 10, 3, 40)
+    sport_car = SportCar('Ferrari', 'Желтый', 35, 7, 1)
+    racers = [town_car, work_car, sport_car]
+    mega_race = Race(racers, 300)
+    mega_race.start_race()

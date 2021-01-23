@@ -22,3 +22,12 @@ class Pencil (Stationery):
 class Handle (Stationery):
     def draw(self):
         print(f'{self.title} нужен для выжедения')
+
+
+def main():
+    pen = Pen('Ручка')
+    pencil = Pencil('Карандаш')
+    handle = Handle('Маркер')
+    pen.draw()
+    pencil.draw()
+    handle.draw()

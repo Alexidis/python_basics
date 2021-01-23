@@ -54,3 +54,10 @@ class Matrix:
             raise Exception('Матрицы не семетричны')
         else:
             raise Exception('Матрицы разных размерностей ')
+
+
+def main():
+    matrix_a = Matrix([[2, 3, 4], [5, 6, 7], [8, 9, 10]])
+    matrix_b = Matrix([[1, 1, 1], [2, 2, 2], [3, 3, 3]])
+    matrix_c = matrix_a + matrix_b
+    print(matrix_c)

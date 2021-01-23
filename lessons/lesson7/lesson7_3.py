@@ -79,3 +79,19 @@ class Cell:
             # добавлям символ конца ряда
             nucleus.insert(row_end, '/n')
         return ''.join(nucleus)
+
+
+def main():
+    cell = Cell(7)
+    cell2 = Cell(5)
+    cell3 = cell + cell2
+    print(cell3.make_order(5))
+
+    cell3 = cell - cell2
+    print(cell3.make_order(1))
+
+    cell3 = cell * cell2
+    print(cell3.make_order(7))
+
+    cell3 = cell / cell2
+    print(cell3.make_order(1))

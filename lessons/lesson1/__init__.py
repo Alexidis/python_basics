@@ -1,0 +1,9 @@
+from .lesson1_1 import print_simple as task1
+from .lesson1_2 import sec_to_time as task2
+from .lesson1_3 import wild_s as task3
+from .lesson1_4_1 import greatest_digit as task4_1
+from .lesson1_4_2 import greatest_digit as task4_2
+from .lesson1_4_3 import greatest_digit as task4_3
+from .lesson1_4_4 import greatest_digit as task4_4
+from .lesson1_5 import some_economics as task5
+from .lesson1_6 import fitness_tracker as task6
